@@ -1,11 +1,15 @@
 import React from "react";
 
 const ImageList = ({images}) => {
-    images.forEach((image)=>{
-        console.log(image)
+    const imageList = images.map((image)=>{
+        return <img src ={image.urls.small}/>
     })
     return(
-        <div></div>
+        <div className="image__container">
+            <div className="image__box">
+                {imageList}
+            </div>
+        </div>
     )
 
 
