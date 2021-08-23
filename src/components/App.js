@@ -11,18 +11,20 @@ import axios from "axios";
 const API_KEY = "0YBRQldRxa3BdyJCjkPMCI9rZnP5yfGr8Eq2_G1x2wQ";
 
 const App = ()=>{
+    const [imageList, setImageList ] = useState([]);
   
     const onFormSubmit = async (query)=>{
         console.log(query);
-        const data = await axios.get(`https://api.unsplash.com/search/photos?query=${query}&client_id=${API_KEY}`)
-        console.log(data);
+        const data = await axios.get(`https://api.unsplash.com/search/photos?query=${query}&client_id=${API_KEY}`);
+        console.log(data.data.results);
+        setImageList(data.data.results);
 
     }
 
     return (
         <div>
             <SearchBar onFormSubmit = {onFormSubmit}/>
-            <ImageList />
+            <ImageList images={imageList}/>
         </div>
     )
 

@@ -1,8 +1,11 @@
 import React from "react";
 
-const ImageList = ()=>{
+const ImageList = ({images}) => {
+    images.forEach((image)=>{
+        console.log(image)
+    })
     return(
-        <div>hi</div>
+        <div></div>
     )
 
 
