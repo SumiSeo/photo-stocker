@@ -28,16 +28,33 @@ body {
 }
 
 .image__container {
+  margin-top: 2rem;
+  margin-left: 4rem;
   display: grid;
-  grid-template-columns: repeat(3, 1rem);
-  grid-auto-rows: 300px;
+  grid-template-columns: repeat(auto-fill, 400px);
+  grid-template-rows: 300px;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .image__box {
-  width: 400px;
+  background-size: cover;
+  background-position: center;
   height: 300px;
+  width: 400px;
+  position: relative;
 }
-.img {
-  width: 400px;
+
+img {
   height: 300px;
+  width: 400px;
+}
+
+.black__box {
+  background-color: rgba(black, 0.7);
+  width: 400px;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }

@@ -15,7 +15,12 @@ const App = ()=>{
   
     const onFormSubmit = async (query)=>{
         console.log(query);
-        const data = await axios.get(`https://api.unsplash.com/search/photos?query=${query}&client_id=${API_KEY}`);
+        const data = await axios.get(`https://api.unsplash.com/search/photos?query=${query}&client_id=${API_KEY}`,{
+            params: {
+                per_page:40,
+
+            }
+        });
         console.log(data.data.results);
         setImageList(data.data.results);
 
@@ -24,7 +29,7 @@ const App = ()=>{
     return (
         <div>
             <SearchBar onFormSubmit = {onFormSubmit}/>
-            <ImageList images={imageList}/>
+                <ImageList images={imageList}/>
         </div>
     )
 
