@@ -33,7 +33,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, 400px);
   grid-template-rows: 300px;
-  gap: 15px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
@@ -48,13 +48,18 @@ body {
 img {
   height: 300px;
   width: 400px;
+  cursor: pointer;
 }
 
 .black__box {
   background-color: rgba(black, 0.7);
   width: 400px;
-  height: 60px;
+  height: 80px;
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 10;
+}
+.hidden {
+  display: none;
 }

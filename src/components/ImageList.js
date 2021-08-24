@@ -1,26 +1,37 @@
 import React from "react";
 
 const ImageList = ({images}) => {
-    const hoverImage = (s) => {
-        const blackBox = document.createElement("div");
-        blackBox.classList.add("black__box");
-        document.querySelector(".image__box").appendChild(blackBox);
+    const blackBox = document.createElement("div");
+    blackBox.classList.add("black__box");
+    
+
+    const hoverImage = (e) => {
+        const div = e.target.nextSibling;
+        div.classList.remove("hidden");
+
+    }
+    const mouseLeave = (e) => {
+        const div = e.target.nextSibling;
+        div.classList.add("hidden");
+
     }
     const imagesArr = images.map((image)=>{
         return (
             <div 
-            onMouseEnter={hoverImage}
             key={image.id} 
             className="image__box">
-                <img alt={image.description} src= {image.urls.small}/>
+                <img 
+                onMouseLeave={(e)=>{mouseLeave(e)}}
+                onMouseEnter={(e)=>{hoverImage(e)}} alt={image.description} src= {image.urls.small}/>
+                <div className="black__box hidden"></div>
             </div>
         )
         
-   
     })
     return(
-        <div className="image__container">
 
+        <div className="image__container">
+            
                 {imagesArr}
                 
         </div>
