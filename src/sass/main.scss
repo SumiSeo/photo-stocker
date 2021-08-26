@@ -6,12 +6,10 @@ $light-grey: #596275;
 body {
   font-family: "Mulish", sans-serif;
   font-size: 62.5%;
+  padding: 4rem 5rem;
 }
 
 .search {
-  margin-top: 4rem;
-  margin-left: 4rem;
-
   &__input {
     padding: 1rem 6rem;
     border-radius: 0.5rem;
@@ -29,7 +27,7 @@ body {
 
 .image__container {
   margin-top: 2rem;
-  margin-left: 4rem;
+
   display: grid;
   grid-template-columns: repeat(auto-fill, 400px);
   grid-template-rows: 300px;
@@ -54,12 +52,39 @@ img {
 .black__box {
   background-color: rgba(black, 0.7);
   width: 400px;
-  height: 80px;
+  height: 65px;
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .hidden {
   display: none;
+}
+
+.black__box--infos {
+  display: flex;
+  align-items: center;
+}
+.black__box--profile {
+  width: 30px;
+  height: 30px;
+  margin-left: 1rem;
+  border-radius: 50%;
+}
+
+.black__box--user {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin-left: 1rem;
+}
+
+.black__box--likes {
+  font-size: 1rem;
+  color: white;
+  margin-right: 1rem;
 }
