@@ -1,6 +1,11 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 
 const SearchBar = ({onFormSubmit})=>{  
+
+    useEffect(()=>{
+        onFormSubmit("architecture");
+
+    },[])
     const [query, setQuery] = useState("");
     const onSubmit = (e)=>{
         e.preventDefault();

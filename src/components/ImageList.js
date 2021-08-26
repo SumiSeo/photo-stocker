@@ -30,7 +30,7 @@ const ImageList = ({images}) => {
                         <h6 className="black__box--user">{image.user.first_name}</h6>
                     </div>
                     <div className="black__box--bookmark">
-                        <h6 className="black__box--likes"> ❤️ {image.user.total_likes}</h6>
+                        <h6 className="black__box--likes"> <i className="fas fa-bookmark"></i> {image.user.total_likes}</h6>
                     </div>
                    
                 </div>

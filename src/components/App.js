@@ -4,6 +4,10 @@ import Main from "../sass/main.scss";
 //Components
 import SearchBar from "./SearchBar";
 import ImageList from "./ImageList";
+import Navigation from "./Navigation";
+
+
+
 import axios from "axios";
 
 
@@ -28,8 +32,13 @@ const App = ()=>{
 
     return (
         <div>
-            <SearchBar onFormSubmit = {onFormSubmit}/>
-                <ImageList images={imageList}/>
+            <header>
+                <Navigation/>
+            </header>
+            <div>
+                <SearchBar onFormSubmit = {onFormSubmit}/>
+                    <ImageList images={imageList}/>
+            </div>
         </div>
     )
 
