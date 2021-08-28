@@ -5,18 +5,42 @@ import Main from "../sass/main.scss";
 import SearchBar from "./SearchBar";
 import ImageList from "./ImageList";
 import Navigation from "./Navigation";
+import Accordion from "./Accordion";
 
 
-
+//Api and thirdparty libraries
 import axios from "axios";
-
-
-//Api 
 const API_KEY = "0YBRQldRxa3BdyJCjkPMCI9rZnP5yfGr8Eq2_G1x2wQ";
 
+/////////////////////////////////
+const items = [
+    {
+        title : "What is this application for ? ",    
+        content : "You can find all the images depending on your needs.",
+        icon : "fas fa-plus-circle",
+
+    },
+    {
+        title : "Which stack is used in this application ?",    
+        content : "I used predominantly React Hooks, SCSS and third-party API.",
+        icon:  "fas fa-plus-circle",
+    },
+
+    {
+        title : "Who made this application?",    
+        content : "Hi :) I am Sumi. I am a software engineer who has a strong basic both front-end and back-end development. You can check my git hub here 👉 https://github.com/SumiSeo",
+        icon : "fas fa-plus-circle",
+    }
+
+];
+
+
+
+
+/////////////////////////////////
 const App = ()=>{
     const [imageList, setImageList ] = useState([]);
-  
+
     const onFormSubmit = async (query)=>{
         console.log(query);
         const data = await axios.get(`https://api.unsplash.com/search/photos?query=${query}&client_id=${API_KEY}`,{
@@ -27,17 +51,19 @@ const App = ()=>{
         });
         console.log(data.data.results);
         setImageList(data.data.results);
-
     }
-
+    const onVideoSubmit = ()=>{
+        console.log("This is abuot video");
+    }
     return (
         <div>
             <header>
                 <Navigation/>
             </header>
             <div>
-                <SearchBar onFormSubmit = {onFormSubmit}/>
-                    <ImageList images={imageList}/>
+                {/* <SearchBar onFormSubmit = {onFormSubmit}/> */}
+                    {/* <ImageList images={imageList}/> */}
+                    <Accordion items={items}/>
             </div>
         </div>
     )

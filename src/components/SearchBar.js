@@ -4,7 +4,6 @@ const SearchBar = ({onFormSubmit})=>{
 
     useEffect(()=>{
         onFormSubmit("architecture");
-
     },[])
     const [query, setQuery] = useState("");
     const onSubmit = (e)=>{
