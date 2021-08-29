@@ -1,17 +1,16 @@
 import React from "react";
 
-const Navigation = ()=>{
+
+const Founder = ()=>{
     return (
         <div>
-            
+            hihi
         </div>
     )
-
-
 
 
 
 };
 
 
-export default Navigation;
+export default Founder;

@@ -4,8 +4,10 @@ import Main from "../sass/main.scss";
 //Components
 import SearchBar from "./SearchBar";
 import ImageList from "./ImageList";
-import Navigation from "./Navigation";
 import Accordion from "./Accordion";
+import Route from "./Route";
+import Founder from "./Founder";
+import Header from "./Header";
 
 
 //Api and thirdparty libraries
@@ -38,9 +40,14 @@ const items = [
 
 
 
+
+
 /////////////////////////////////
 const App = ()=>{
     const [imageList, setImageList ] = useState([]);
+
+  
+   
 
     const onFormSubmit = async (query)=>{
         console.log(query);
@@ -58,18 +65,33 @@ const App = ()=>{
     }
     return (
         <div>
-            <header>
-                <Navigation/>
-            </header>
-            <div>
-                {/* <SearchBar onFormSubmit = {onFormSubmit}/> */}
-                    {/* <ImageList images={imageList}/> */}
-                    <Accordion items={items}/>
+            <div className="nav">
+                <Header/>
             </div>
+            <div className="body__container">
+                <Route 
+                path="/">
+                    <SearchBar onFormSubmit = {onFormSubmit}/>
+                    <ImageList images={imageList}/>
+                </Route>
+
+                <Route 
+                path="/about">
+                    <Accordion items={items}/>
+                </Route>
+                <Route 
+                path="/founder">
+                    <Founder />
+                </Route>
+            </div>
+                   
+           
         </div>
     )
 
 
 }
+
+
 
 export default App;
