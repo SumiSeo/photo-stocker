@@ -1,14 +1,15 @@
 import React from "react";
+import Link from "./Link";
 
 const Header = () => {
     return (
         <div className="header">
             <div className="logo">  
-                <a href="/" className="link logo__link">Cadre Du Monde</a>
+                <Link href="/" className="link logo__link">Cadre Du Monde</Link>
              </div>
              <div className="links">
-                <a href="/about" className="link about__link">About</a>
-                <a href="/founder" className="link founder__link">Founder</a>
+                <Link href="/about" className="link about__link">About</Link>
+                <Link href="/founder" className="link founder__link">Founder</Link>
             </div>
         </div>
     )
