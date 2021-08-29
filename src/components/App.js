@@ -13,23 +13,24 @@ import axios from "axios";
 const API_KEY = "0YBRQldRxa3BdyJCjkPMCI9rZnP5yfGr8Eq2_G1x2wQ";
 
 /////////////////////////////////
+
 const items = [
     {
         title : "What is this application for ? ",    
         content : "You can find all the images depending on your needs.",
-        icon : "fas fa-plus-circle",
+        icon : "fas fa-arrow-circle-down",
 
     },
     {
         title : "Which stack is used in this application ?",    
         content : "I used predominantly React Hooks, SCSS and third-party API.",
-        icon:  "fas fa-plus-circle",
+        icon:  "fas fa-arrow-circle-down",
     },
 
     {
         title : "Who made this application?",    
-        content : "Hi :) I am Sumi. I am a software engineer who has a strong basic both front-end and back-end development. You can check my git hub here 👉 https://github.com/SumiSeo",
-        icon : "fas fa-plus-circle",
+        content : "Hi :) I am Sumi. I am a Full-stack developer. You can check my git hub here 👉 https://github.com/SumiSeo",
+        icon : "fas fa-arrow-circle-down",
     }
 
 ];

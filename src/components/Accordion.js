@@ -16,12 +16,14 @@ const Accordion = ({items}) => {
             <div key={index} className="item__box">
                 <div className="item__info" >
                     <h2 className="item__title">{item.title}</h2>
-                    <div className="panel">
-                        <p className={`hidden ${active}`}>{item.content}</p>
+                    <div 
+                    className={`panel ${active}`}>
+                        <p className>{item.content}</p>
                     </div>
                    
 
-                <i onClick={()=>{onTitleClick(index)}}
+                <i 
+                onClick={()=>{onTitleClick(index)}}
                 className={item.icon}></i>
                 </div>
               
@@ -35,10 +37,9 @@ const Accordion = ({items}) => {
                 <div 
                
                 className="about">
-                About 🔍 Cadre Du Monde</div>
+                About...</div>
                 <div 
-                
-                className="infox">{eachItem}</div>    
+                >{eachItem}</div>    
 
             </div>
         </div>
