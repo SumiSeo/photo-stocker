@@ -2,56 +2,65 @@ import React,{useState, useEffect} from "react";
 
 const slides = document.querySelectorAll(".founder__box");
 slides.forEach((slide, i)=>{
-        console.log(slide);
-        slide.style.transform = `translateX((${i * 100})%)`;
+    console.log(slide);
+    console.log(i);
+    slide.style.transform = `translateX(${i * 100}%) translateY(${- i * 100}%)`;
 });
-    
-    let curSlide = -1;
-    
+
+let curSlide = 0;
+
+const maxSlide = slides.length;
 const Founder = ()=>{
-    
+    useEffect(()=>{
+        slides.forEach((slide, i)=>{
+            console.log(slide);
+            console.log(i);
+            slide.style.transform = `translateX(${i * 100}%) translateY(${- i * 100}%)`;
+    });
+
+    },[])
     const [index, setSelectedIndex] = useState(0);
     // 
 
     const onLeftClick = () =>{
-        console.log("hi");
+        if(curSlide ===0){
+            curSlide = maxSlide;
+        }
+        curSlide--;
+        slides.forEach((slide, i)=>{
+            console.log(slide);
+            console.log(i);
+            slide.style.transform = `translateX(${(i-curSlide) * 100}%) translateY(${- i * 100}%)`;
+        });
+
     };
 
     //Nest Slide
-    const maxSlide = slides.length;
-    const onClick = ()=>{
-        console.log("hi");
-        setSelectedIndex(index+1);
-        if(index = maxSlide) {
-            setSelectedIndex(0);
-        } else{
+    
+    const onRightClick = ()=>{
+        console.log(34);
+        if(curSlide === maxSlide-1){
+            curSlide = -1;
+        }
+        else{
+            curSlide++;
             slides.forEach((slide, i)=>{
-                console.log(slide);
-                slide.style.transform = `translateX(${100 * (i-index)}%)`;
+            console.log(slide);
+            console.log(i);
+            slide.style.transform = `translateX(${(i-curSlide) * 100}%) translateY(${- i * 100}%)`;
         });
+
+        }
+        
     };
 
        
-        // if(curSlide === maxSlide-1){
-        //     curSlide = 0;
-        // } else{
-        //     curSlide++;
-        //     slides.forEach((slide, i)=>{
-        //     console.log(slide);
-        //     slide.style.transform = `translateX(${100 * (i-curSlide)}%)`;
-        // })
-        // }
-        
 
-
-    };
-   
 
     return (
         <div className="founder">
-            <div className="founder__container">
-                <div 
-                onClick={onClick}
+            <div 
+                onClick={onRightClick}
                 className="arrow">
                     <i className="fas fa-chevron-right"></i>
                 </div>
@@ -59,7 +68,9 @@ const Founder = ()=>{
                 onClick={onLeftClick}
                 className="arrow">
                     <i className="fas fa-chevron-left"></i>
-                </div>
+            </div>
+            <div className="founder__container">
+                
                 <div className="founder__box">
                     <div className="founder__column founder__img1"> </div>
                     <div className="founder__column">

@@ -215,22 +215,29 @@ img {
   font-size: 1.6rem;
   font-weight: 300;
 }
+// .founder__container {
+//   overflow: hidden;
+// }
 
-.founder {
-  position: relative;
-}
 .founder__box {
   margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   background-color: white;
   border-radius: 10px;
-  padding: 4rem 3rem;
-  position: absolute;
+  padding: 3rem 2rem;
   transition: all 0.4s ease-in-out;
+  // position: absolute;
 }
-// .founder__container {
-// }
+
+.founder__box:nth-child(2) {
+  transform: translateX(100%);
+  background-color: red;
+}
+.founder__box:last-child {
+  transform: translateX(200%);
+  background-color: red;
+}
 
 .founder__img1 {
   background-image: url("../img/fullstack.jpg");
@@ -258,7 +265,7 @@ img {
   line-height: 1.5;
 }
 
-.founder__container {
+.founder {
   position: relative;
   // overflow: hidden;
 }
@@ -267,7 +274,7 @@ img {
   font-size: 2rem;
   position: absolute;
   right: 2rem;
-  top: 15rem;
+  top: 25rem;
   cursor: pointer;
 }
 
@@ -276,7 +283,7 @@ img {
   font-size: 2rem;
   position: absolute;
   left: 2rem;
-  top: 15rem;
+  top: 25rem;
   cursor: pointer;
 }
 
