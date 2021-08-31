@@ -1,18 +1,17 @@
 import React,{useState, useEffect} from "react";
 
-const slides = document.querySelectorAll(".founder__box");
-slides.forEach((slide, i)=>{
-    console.log(slide);
-    console.log(i);
-    slide.style.transform = `translateX(${i * 100}%) translateY(${- i * 100}%)`;
-});
 
+let slides ;
+let maxSlide;
 let curSlide = 0;
-
-const maxSlide = slides.length;
 const Founder = ()=>{
+  
     useEffect(()=>{
-        slides.forEach((slide, i)=>{
+    slides = document.querySelectorAll(".founder__box");
+    console.log(slides);
+    maxSlide = slides.length;
+    console.log(maxSlide);
+    slides.forEach((slide, i)=>{
             console.log(slide);
             console.log(i);
             slide.style.transform = `translateX(${i * 100}%) translateY(${- i * 100}%)`;
@@ -30,7 +29,7 @@ const Founder = ()=>{
         slides.forEach((slide, i)=>{
             console.log(slide);
             console.log(i);
-            slide.style.transform = `translateX(${(i-curSlide) * 100}%) translateY(${- i * 100}%)`;
+            slide.style.transform = `translateX(${(i-curSlide) * 100}%)`;
         });
 
     };
@@ -38,7 +37,7 @@ const Founder = ()=>{
     //Nest Slide
     
     const onRightClick = ()=>{
-        console.log(34);
+        console.log("clicked");
         if(curSlide === maxSlide-1){
             curSlide = -1;
         }
@@ -47,7 +46,7 @@ const Founder = ()=>{
             slides.forEach((slide, i)=>{
             console.log(slide);
             console.log(i);
-            slide.style.transform = `translateX(${(i-curSlide) * 100}%) translateY(${- i * 100}%)`;
+            slide.style.transform = `translateX(${(i-curSlide) * 100}%)`;
         });
 
         }
