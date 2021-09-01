@@ -15,6 +15,7 @@ const Founder = ()=>{
             console.log(slide);
             console.log(i);
             slide.style.transform = `translateX(${i * 100}%)`;
+
             
     });
 

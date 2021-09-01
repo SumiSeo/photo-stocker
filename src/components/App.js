@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from "react";
+import React,{useState} from "react";
 import Main from "../sass/main.scss";
 
 //Components
@@ -58,7 +58,6 @@ const App = ()=>{
 
             }
         });
-        console.log(data.data.results);
         setImageList(data.data.results);
     }
    
