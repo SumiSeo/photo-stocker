@@ -50,7 +50,7 @@ const App = ()=>{
   
    
 
-    const onFormSubmit = async (query)=>{
+    const callApis = async (query)=>{
         console.log(query);
         const data = await axios.get(`https://api.unsplash.com/search/photos?query=${query}&client_id=${API_KEY}`,{
             params: {
@@ -70,7 +70,7 @@ const App = ()=>{
             <div className="body__container">
                 <Route 
                 path="/">
-                    <SearchBar onFormSubmit = {onFormSubmit}/>
+                    <SearchBar onFormSubmit = {callApis}/>
                     <ImageList images={imageList}/>
                 </Route>
 
