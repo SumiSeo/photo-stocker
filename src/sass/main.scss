@@ -224,7 +224,7 @@ img {
   z-index: 100;
   font-size: 2rem;
   position: absolute;
-  right: 6rem;
+  right: 2rem;
   top: 15rem;
   cursor: pointer;
 }
@@ -246,42 +246,46 @@ img {
 // }
 
 .founder {
-  background-color: blue;
-  width: 70rem;
+  // background-color: blue;
+  // width: 80rem;
   height: 30rem;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .founder__box:first-child {
-  width: 70rem;
+  width: 80rem;
   height: 30rem;
   border-radius: 10px;
   background-color: white;
   position: absolute;
-  padding: 2rem 3rem;
-  display: flex;
+  padding: 1rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   transition: all 0.4s ease-in-out;
 }
 .founder__box:nth-child(2) {
-  width: 70rem;
+  width: 80rem;
   border-radius: 10px;
   height: 30rem;
   background-color: white;
   position: absolute;
-  padding: 2rem 3rem;
-  display: flex;
+  padding: 1rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   transition: all 0.4s ease-in-out;
 }
 .founder__box:last-child {
-  width: 70rem;
+  width: 80rem;
   border-radius: 10px;
   height: 30rem;
   background-color: white;
   position: absolute;
-  padding: 2rem 3rem;
-  display: flex;
+  padding: 1rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   transition: all 0.4s ease-in-out;
 }
@@ -292,6 +296,7 @@ img {
   background-size: cover;
   width: 500px;
   height: 400px;
+  margin-left: 2rem;
 }
 .founder__img2 {
   background-image: url("../img/build.jpg");
@@ -299,7 +304,7 @@ img {
   background-size: cover;
   width: 500px;
   height: 400px;
-
+  margin-left: 2rem;
   // margin-left: 1rem;
 }
 
@@ -309,12 +314,13 @@ img {
   background-size: cover;
   width: 500px;
   height: 400px;
+  margin-left: 2rem;
   // margin-left: 1rem;
 }
 
 .double__quotes i {
   font-size: 2.2rem;
-  margin-left: 4rem;
+
   color: #fbc531;
   position: relative;
   top: -4rem;
@@ -325,7 +331,7 @@ img {
   color: #2f3640;
   width: 90%;
   position: relative;
-  left: 1rem;
+  left: -2rem;
   top: -1rem;
   line-height: 1.5;
 }

@@ -73,12 +73,46 @@ const Founder = ()=>{
         
                     <article className="founder__box">
                         <div className="founder__img1"></div>
+                        <div className="founder__text">
+                            <div className="double__quotes">
+                                <i className="fas fa-quote-left"></i>
+                            </div>
+                            <p className="double__hello">
+                            Hello, I am Sumi 😄
+                            <br></br>
+                            I am a Full-stack developer who 
+                            has proficiency including both frontend and backend work — HTML/SCSS, JavaScript, React, PHP, SQL, and third-party APIs. 
+                            </p>
+                        </div>
                     </article>
                     <article className="founder__box">
                         <div className="founder__img2"></div>
+                        <div className="founder__text">
+                            <div className="double__quotes">
+                                <i className="fas fa-quote-left"></i>
+                            </div>
+                            <p className="double__hello">
+                            I love creating things from scratch 🤩
+                            <br></br>
+                            I graduated Korea National University of Arts.  I made several short-films, wrote disseration about an art.
+                            All these experiences drove me to find a way to do web development.
+
+                            </p>
+                        </div>
                     </article>
                     <article className="founder__box">
-                        <div className="founder__img2"></div>  
+                        <div className="founder__img3"></div> 
+                        <div className="founder__text">
+                            <div className="double__quotes">
+                                <i className="fas fa-quote-left"></i>
+                            </div>
+                            <p className="double__hello">
+                                    I am a team player 🤓
+                                    <br></br>
+                                    Since I have the background in design and marketing, I have followed the history of web development.
+                                    I enjoy to be on a team and build innovative things together.
+                            </p> 
+                        </div>
                     </article>
 
 

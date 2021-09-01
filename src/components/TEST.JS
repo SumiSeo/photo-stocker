@@ -105,15 +105,7 @@ const Founder = ()=>{
                         <div className="founder__inside">
                             <div className="founder__column founder__img3"> </div>
                             <div className="founder__column">
-                                <div className="double__quotes">
-                                <i className="fas fa-quote-left"></i>
-                                </div>
-                                <p className="double__hello">
-                                I am a team player 🤓
-                                <br></br>
-                                Since I have the background in design and marketing, I have followed the history of web development.
-                                I enjoy to be on a team and build innovative things together.
-                                </p>
+                                
                             </div>
                         </div>
                     </div>
