@@ -26,7 +26,8 @@ const ImageList = ({images}) => {
                 onMouseEnter={(e)=>{hoverImage(e)}} alt={image.description} src= {image.urls.small}/>
                 <div className="black__box hidden">
                     <div className="black__box--infos">
-                        <img className="black__box--profile" src={image.user.profile_image.medium}/>
+                        <img alt={image.user.first_name}
+                        className="black__box--profile" src={image.user.profile_image.medium}/>
                      
                         <h6 className="black__box--user">{image.user.first_name}</h6>
                     </div>

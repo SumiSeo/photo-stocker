@@ -61,9 +61,7 @@ const App = ()=>{
         console.log(data.data.results);
         setImageList(data.data.results);
     }
-    const onVideoSubmit = ()=>{
-        console.log("This is abuot video");
-    }
+   
     return (
         <div>
             <div className="nav">
