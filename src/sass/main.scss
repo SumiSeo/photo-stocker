@@ -215,65 +215,16 @@ img {
   font-size: 1.6rem;
   font-weight: 300;
 }
-.founder__container {
-  overflow: hidden;
-}
-
-.founder__box {
-  margin-top: 1rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  background-color: white;
-  border-radius: 10px;
-  padding: 3rem 2rem;
-  transition: all 0.4s ease-in-out;
-  // position: absolute;
-}
-
-.founder__box:nth-child(2) {
-  transform: translateX(100%);
-  background-color: red;
-}
-.founder__box:last-child {
-  transform: translateX(200%);
-  background-color: red;
-}
-
-.founder__img1 {
-  background-image: url("../img/fullstack.jpg");
-  background-position: center;
-  background-size: cover;
-  width: 500px;
-  height: 400px;
-  margin-left: 1rem;
-}
-
-.double__quotes i {
-  font-size: 2.2rem;
-  margin-left: 4rem;
-  color: #fbc531;
-  margin-top: 2rem;
-}
-
-.double__hello {
-  font-size: 1.5rem;
-  color: #2f3640;
-  width: 90%;
-  position: relative;
-  left: 1rem;
-  top: 2rem;
-  line-height: 1.5;
-}
 
 .founder {
   position: relative;
-  // overflow: hidden;
 }
+
 .arrow .fa-chevron-right {
   z-index: 100;
   font-size: 2rem;
   position: absolute;
-  right: 2rem;
+  right: 6rem;
   top: 15rem;
   cursor: pointer;
 }
@@ -287,13 +238,69 @@ img {
   cursor: pointer;
 }
 
+// .founder__container {
+//   overflow: hidden;
+// }
+// .founder__box {
+//   overflow: hidden;
+// }
+
+.founder {
+  background-color: blue;
+  width: 70rem;
+  height: 30rem;
+  overflow: hidden;
+}
+
+.founder__box:first-child {
+  width: 70rem;
+  height: 30rem;
+  border-radius: 10px;
+  background-color: white;
+  position: absolute;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+.founder__box:nth-child(2) {
+  width: 70rem;
+  border-radius: 10px;
+  height: 30rem;
+  background-color: white;
+  position: absolute;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+.founder__box:last-child {
+  width: 70rem;
+  border-radius: 10px;
+  height: 30rem;
+  background-color: white;
+  position: absolute;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+
+.founder__img1 {
+  background-image: url("../img/fullstack.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 500px;
+  height: 400px;
+}
 .founder__img2 {
   background-image: url("../img/build.jpg");
   background-position: center;
   background-size: cover;
   width: 500px;
   height: 400px;
-  margin-left: 1rem;
+
+  // margin-left: 1rem;
 }
 
 .founder__img3 {
@@ -302,11 +309,23 @@ img {
   background-size: cover;
   width: 500px;
   height: 400px;
-  margin-left: 1rem;
+  // margin-left: 1rem;
 }
 
-// .founder__container:nth-child(2) {
-// }
+.double__quotes i {
+  font-size: 2.2rem;
+  margin-left: 4rem;
+  color: #fbc531;
+  position: relative;
+  top: -4rem;
+}
 
-// .founder__container:last-child {
-// }
+.double__hello {
+  font-size: 1.5rem;
+  color: #2f3640;
+  width: 90%;
+  position: relative;
+  left: 1rem;
+  top: -1rem;
+  line-height: 1.5;
+}
