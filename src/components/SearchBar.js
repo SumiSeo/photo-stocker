@@ -2,9 +2,9 @@ import React,{useState, useEffect} from "react";
 
 const SearchBar = ({onFormSubmit})=>{  
     const [query, setQuery] = useState("");
-    // useEffect(()=>{
-    //     onFormSubmit("art");
-    // },[])
+    useEffect(()=>{
+        onFormSubmit("art");
+    })
 
     const onSubmit = (e)=>{
         e.preventDefault();
