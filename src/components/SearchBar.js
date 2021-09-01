@@ -4,7 +4,7 @@ const SearchBar = ({onFormSubmit})=>{
     const [query, setQuery] = useState("");
     useEffect(()=>{
         onFormSubmit("art");
-    })
+    },[query])
 
     const onSubmit = (e)=>{
         e.preventDefault();
