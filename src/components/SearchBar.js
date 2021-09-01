@@ -4,15 +4,15 @@ const SearchBar = ({onFormSubmit})=>{
     const [query, setQuery] = useState("");
     useEffect(()=>{
         onFormSubmit("art");
-    },[query])
+    },[]);
 
     const onSubmit = (e)=>{
         e.preventDefault();
         onFormSubmit(query);
-    }
+    };
     const onInputChange = (e)=>{
         setQuery(e.target.value);
-    }
+    };
 
     return (
         <div className="search"> 
