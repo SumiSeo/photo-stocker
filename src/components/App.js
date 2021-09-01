@@ -22,6 +22,7 @@ const items = [
         title : "What is this application for ? ",    
         content : "You can find all the images depending on your needs.",
         icon : "fas fa-arrow-circle-down",
+        main: Main,
 
     },
     {
